@@ -8,7 +8,7 @@ I've always been interested in unsupervised deep learning so here's an autoencod
 - Just for simplicity, I only used horizontal flip augmentation. stronger and more augmentation should definetely help but will differ based on the use case. So I suggest you play around with that.
 - Remember, you shouldnt just use one of my two custom arhitecures or the torch FCN and expect to work well with your data. Be sure to learn some basic torch code if don't know already and play around with the architecture until you find the opitimal one for your data.
 - After training, the best validation checkpoint will be saved to a file called 'best_model.pth'. You can then use the 'evaluate.py' and 'inference.py' on the test and validate sets.
-- In order to use this for compression/decompression purposes, I put the encoder and decoder into separate nn.Sequential blocks. Making it very easy to decouple the encoder and decoder post training.
+- In order to use this for compression/decompression purposes, I put the encoder and decoder into separate nn.Sequential blocks. Making it very easy to decouple the encoder and decoder post training. The encoder can be references using 'model.encoder' and the decoer using 'model.decoder'
 
 ## Credit
 - If you use this implementation or any parts of it, all I ask is that you give me credit (Pranav Raja, researcher at UC Davis) and include a link to this repo if you post it on Github.
